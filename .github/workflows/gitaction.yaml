@@ -62,7 +62,7 @@ jobs:
       - name: Sign image
         env:
           COSIGN_KEY: ${{ secrets.COSIGN_PRIVATE_KEY }}
-          COSIGN_PASSWORD: ""
+          COSIGN_PASSWORD: {{ secrets.COSIGN_PASSWORD }}
         run: |
           IMAGE_TAG=${GITHUB_SHA}
 
