@@ -101,10 +101,10 @@ jobs:
       - name: Update Helm repo
         env:
           IMAGE_TAG: ${{ github.sha }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          HELM_REPO_TOKEN: ${{ secrets.HELM_REPO_TOKEN }}
         run: |
           git clone \
-            https://x-access-token:${GITHUB_TOKEN}@github.com/sajit21/demo-app-helm.git
+            https://x-access-token:${HELM_REPO_TOKEN}@github.com/sajit21/demo-app-helm.git
 
           cd demo-app-helm
 
